@@ -1,0 +1,20 @@
+.sweet-alert { margin: auto; transform: translateX(-50%); }
+.sweet-alert.sweetalert-lg { width: 800px; }
+
+.customSwalBtn{
+    background-color: #4cae4c;
+    border-left-color: #4cae4c;
+    border-right-color:  #4cae4c;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    left: 280px;
+    margin: 30px 5px 0px 5px;
+    padding: 10px 32px;
+    left: 300px;
+}
