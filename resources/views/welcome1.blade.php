@@ -9,7 +9,8 @@
 
     @include('layouts.HeaderLogin')
 
-<link rel="stylesheet" href="{{URL::asset('assets/css/accounting.style.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('assets/css/accounting.style.css')}}">
+    <link rel="stylesheet" href={{URL::asset('assets/plugins/brand-buttons/brand-buttons.css')}}">
 </head>
 
 <body>
@@ -246,7 +247,14 @@
 
                             <h5><a href="paytan" style="color: #00008b">Click here to visit your account <strong>HRM Systm</strong></a></h5>
 
-			<h5><a href="paytan" style="color: #00008b"><span><strong class="blinking">Important Announcement</strong></span></a></h5>
+			<!--<h5><a href="paytan" style="color: #00008b"><span><strong class="blinking">Important Announcement</strong></span></a></h5>-->
+
+                                    <button class="btn btn-block btn-appnet">
+                                        <a href="/adminView/adminview" style="color: #00008b"><span><strong>Admin view</strong></span></a>
+                                    </button>
+
+
+
                          </div>
                         <div class="row margin-bottom-70">
                            <!-- <div class="col-md-12">

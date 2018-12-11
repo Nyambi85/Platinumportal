@@ -33,14 +33,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id=null)
     {
 
 
         #Auth::user()->givePermissionTo('add Job');
 
-            //return view('home');
-     if(Auth::user()->hasPermissionTo('add Job')){
+        #$userJson = Auth::user();
+        #return ($userJson);
+
+     if(Auth::user()->hasPermissionTo('add Job') && $id == null){
 
 
 
@@ -129,7 +131,7 @@ class HomeController extends Controller
          return view('adminFolder/adminMain')->with('parameters',$parameters);
 
 
-        }elseif(Auth::user()->hasPermissionTo('view staff page')){
+        }elseif(Auth::user()->hasPermissionTo('view staff page') && $id == null){
 
 
          $jobs = DB::table('jobs')
@@ -139,7 +141,29 @@ class HomeController extends Controller
 
          return view('welcome1')->with('jobs',$jobs);
 
-	}else{
+	}elseif(Auth::user()->hasPermissionTo('adminview') && $id == 'adminview'){
+
+         $userJson = Auth::user();
+         $userID = $userJson["id"];
+
+
+         $customerContactRequest = DB::table('custome_contanct_requests')
+                    ->orderBy('id','desc')
+                    ->take(8)
+                    ->get();
+         $customerQuoterequest = DB::table('customer_quote_requests')
+                    ->orderBy('id','desc')
+                    ->take(8)
+                    ->get();
+         $adminviewData = array(
+             'customerContactQuery'=>$customerContactRequest,
+             'customerQuoterequest'=>$customerQuoterequest
+         );
+
+
+	    return view('adminFolder/adminView')->with('adminviewData',$adminviewData);
+
+     } else{
           #####User ID
           $userJson = Auth::user();
           $userID = $userJson["id"];

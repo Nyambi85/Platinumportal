@@ -106,6 +106,11 @@ Route::group(['middleware' => 'auth'], function () {
         ['as' => 'user.create', 'uses'=>'UserController@store']);
 
 
+    ###Admin view
+    Route::get('adminView/{id}','HomeController@index');
+    Route::get('customerQuoteRequest','CustomerQuoteRequestController@index');
+    Route::get('customerContactRequest','CustomeContanctRequestController@index');
+
 
     ###List users
     Route::get('user/listUser',
@@ -228,6 +233,9 @@ Route::group(['middleware' => 'auth'], function () {
    /* Route::get('mainhome',function (){
         return 'Test';
     });*/
+
+
+
 
 
 	Route::get('paytan','HomeController@Paytan');
