@@ -148,6 +148,7 @@ class PassportController extends Controller
         $customeContanctRequest->customerPhoneNumber = $request['phonenumber'];
         $customeContanctRequest->subject = $request['subject'];
         $customeContanctRequest->message = $request['message'];
+        $customeContanctRequest->contact_requests_status = 'pending';
 
         if($customeContanctRequest->save()){
 
@@ -192,6 +193,7 @@ class PassportController extends Controller
         $customerQuoterequest->requesterLocation = $request['requesterLocation'];
         $customerQuoterequest->requesterJob = $request['requesterJob'];
         $customerQuoterequest->requesterJobLocation = $request['requesterJobLocation'];
+        $customerQuoterequest->quote_requests_status = 'pending';
 
 
 

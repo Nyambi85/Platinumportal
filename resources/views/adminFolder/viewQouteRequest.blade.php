@@ -298,8 +298,10 @@
                                         <th>Customer Name</th>
                                         <th>Email</th>
                                         <th>Mobile number</th>
+                                        <th>Requested product</th>
                                         <th>Requester Location</th>
                                         <th>Requester Job</th>
+                                        <th>Request status</th>
                                         <th>Requesting date</th>
                                     </tr>
                                     </thead>
@@ -309,12 +311,16 @@
                                     @for($i=0; $i < count($customerQuoterequest); $i++)
                                     <tr class="rowdata" data-toggle="modal" data-toggle="modal" data-target="#exampleModalCenter2">
                                         <td>{{$i}}</td>
+
                                         <td>{{$customerQuoterequest[$i]->requesterName}}</td>
                                         <td>{{$customerQuoterequest[$i]->requesterEmail}}</td>
                                         <td>{{$customerQuoterequest[$i]->requesterMobilenumber}}</td>
+                                        <td>{{$customerQuoterequest[$i]->requesterProduct}}</td>
                                         <td>{{$customerQuoterequest[$i]->requesterLocation}}</td>
                                         <td>{{$customerQuoterequest[$i]->requesterJob}}</td>
+                                        <td>{{$customerQuoterequest[$i]->quote_requests_status}}</td>
                                         <td>{{$customerQuoterequest[$i]->created_at}}</td>
+                                        <div class="respons" hidden>
                                         <p class="avl" hidden>{{$customerQuoterequest[$i]->customerNumberAvailability}}</p>
                                         <p class="dial" hidden>{{$customerQuoterequest[$i]->numberOfDials}}</p>
                                         <p class="type" hidden>{{$customerQuoterequest[$i]->customerType}}</p>
@@ -323,6 +329,7 @@
                                         <p class="gender" hidden>{{$customerQuoterequest[$i]->gender}}</p>
                                         <p class="queryDescription" hidden>{{$customerQuoterequest[$i]->queryDescription}}</p>
                                         <p class="assignedTo" hidden>{{$customerQuoterequest[$i]->assignedTo}}</p>
+                                            </div>
                                     </tr>
                                     @endfor
 
@@ -361,6 +368,12 @@
                             <div class="row">
 
                                 <label class="col-md-12"><strong>Mobile number : </strong><span class="modalnumber"></span></label>
+
+                            </div>
+
+                            <div class="row">
+
+                                <label class="col-md-12"><strong> Email : </strong><span class="modalemail"></span></label>
 
                             </div>
 
@@ -488,15 +501,21 @@
 
     var ID;
 
-    $('.rowdata ').click(function () {
+
+    $('.rowdata ').click(function (event) {
+
+        var availability = '';
 
         var ID = $(this).children().eq(0).text();
         var customerName = $(this).children().eq(1).text();
-        var title = $(this).children().eq(4).text();
-        var Msg = $(this).children().eq(3).text();
-        var mobilenumber = $(this).children().eq(2).text();
+        var title = 'Quote request'//$(this).children().eq(8).text();
+        var Msg = $(this).children().eq(4).text();
+        var mobilenumber = $(this).children().eq(3).text();
+        var Cmail = $(this).children().eq(2).text();
 
-        var availability = $('.avl').text();
+        var kid = $(this).children('.respons');
+        availability = $('.respons ').children().eq(0).text();
+        alert(availability);
         var dail = $('.dial').text();
         var type = $('.type').text();
         var location = $('.location').text();
@@ -510,8 +529,9 @@
         //$('.modal-title').replaceWith("<h5><span>"+title+"</span></h5>");
         $('.modal-title').text(title);
         $('.modal-customer-name').text(customerName);
-        $('.modalDescription').text(Msg);
+        $('.modalProductRequested').text(Msg);
         $('.modalnumber').text(mobilenumber);
+        $('.modalemail').text(Cmail);
         $('.avlresp').text(availability);
         $('.numberOfDial').text(dail);
         $('.cstmrType').text(type);

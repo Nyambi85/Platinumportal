@@ -16,12 +16,12 @@ class CustomerQuoteRequestController extends Controller
     public function index()
     {
         //
-     /*   $customerQuoterequest = DB::table('customer_quote_requests')
+      /*  $customerQuoterequest = DB::table('customer_quote_requests')
             ->get();
         return view('adminFolder/viewQouteRequest')->with('customerQuoterequest',$customerQuoterequest);*/
 
-        if($customerQuoterequest = DB::table('customer_quote_requests')
-            ->join('customer_query_responses','customer_query_responses.customerQueryTrackerID','=','customer_quote_requests.id')
+       if($customerQuoterequest = DB::table('customer_quote_requests')
+            ->join('customer_query_responses','customer_query_responses.customerQueryTrackerID','=','customer_quote_requests.id','left outer')
             ->select('customer_query_responses.customerNumberAvailability',
                 'customer_query_responses.numberOfDials',
                 'customer_query_responses.customerType',
@@ -41,7 +41,7 @@ class CustomerQuoteRequestController extends Controller
                 'customer_quote_requests.created_at')
             ->get()){
 
-            #return json_encode($customerContactrequest);
+            #return json_encode($customerQuoterequest);
 
             return view('adminFolder/viewQouteRequest')
                 ->with('customerQuoterequest',$customerQuoterequest);

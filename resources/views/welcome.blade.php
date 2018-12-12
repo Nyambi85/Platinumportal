@@ -623,7 +623,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn-u btn-u-lg btn-u-upper customerContact">Send Message</button>
+                            <button class="btn-u btn-u-lg btn-u-upper customerContact">Send Message</button>
                         </div>
                     </form>
                     <!-- /Contact Form -->
@@ -1128,6 +1128,8 @@
                                                                                                                                                                                                                                                                                                     
 
         $('.customerContact').click(function () {
+
+
             
 
             var name = $('.name').val();

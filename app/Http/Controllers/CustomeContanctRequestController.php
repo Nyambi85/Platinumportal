@@ -17,7 +17,7 @@ class CustomeContanctRequestController extends Controller
     {
         //
         if($customerContactrequest = DB::table('custome_contanct_requests')
-            ->join('customer_query_responses','customer_query_responses.customerQueryTrackerID','=','custome_contanct_requests.id')
+            ->join('customer_query_responses','customer_query_responses.customerQueryTrackerID','=','custome_contanct_requests.id','left outer')
             ->select('customer_query_responses.customerNumberAvailability',
                 'customer_query_responses.numberOfDials',
                 'customer_query_responses.customerType',
