@@ -6,6 +6,19 @@
 
 <!-- Mirrored from htmlstream.com/preview/unify-v1.9.5/blog_large_right_sidebar_item.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Aug 2016 06:12:53 GMT -->
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129719588-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129719588-1');
+    </script>
+
+
+
+
     <title>Blog Large Right Sidebar Item | Unify - Responsive Website Template</title>
 
     <!-- Meta -->

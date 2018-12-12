@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' =>  'http://154.72.81.110',
+    'url' =>  'http://192.168.8.101',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,6 +167,7 @@ return [
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
        # RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
         /*
          * Package Service Providers...

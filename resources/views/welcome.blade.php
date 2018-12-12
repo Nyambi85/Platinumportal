@@ -4,6 +4,19 @@
 
 <!-- Mirrored from htmlstream.com/preview/unify-v1.9.5/One-Pages/Accounting/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Aug 2016 06:13:03 GMT -->
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129719588-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-129719588-1');
+    </script>
+
+
+
     <title>Main Page | Platinum Credit</title>
 
     <!-- Meta -->
@@ -25,6 +38,13 @@
     <link rel="stylesheet" href="{{URL::asset('assets/css/blocks.css')}}">
     <link rel="stylesheet" href="{{URL::asset('assets/css/style.css')}}'">
     <link rel="stylesheet" href="{{URL::asset('assets/css/one.style.css')}}">
+
+    <link rel="stylesheet" href="sweet-modal/dist/min/jquery.sweet-modal.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+
+
 
     <!-- CSS Implementing Plugins -->
     <link rel="stylesheet" href="{{URL::asset('assets/plugins/animate.css')}}">
@@ -97,6 +117,8 @@
                     <div class="header-buttons cd-log_reg">
                         <a class="btn-u btn-u-lg btn-u-upper cd-signin" href="/home">Login</a>
                     </div>
+
+
                 </div>
             </div>
             <!-- /.navbar-collapse -->
@@ -114,6 +136,7 @@
                 <div class="promo-item-content">
                     <h3 >We provide <strong ">Emergency loans</strong> that meet financial needs of all  <strong >Civil servants</strong> </h3>
                     <a class="btn-u btn-u-lg btn-u-upper" href="/cspage">View more details</a>
+                    <a class="btn-u btn-u-lg  btn-brd btn-brd-hover rounded-4x btn-u-dark-blue" data-toggle="modal" data-toggle="modal" data-target="#exampleModalCenter">GET FREE QUOTE</a>
                 </div>
             </div>
         </div>
@@ -122,6 +145,7 @@
                 <div class="promo-item-content">
                     <h3>Simple way of making difference<br>Your business , your Loan<br><strong >Platinum credit</strong> </br> <strong >There when you need us</strong></h3>
                     <a class="btn-u btn-u-lg btn-u-upper" href="ujasiriamaliloan">View more details</a>
+                    <a class="btn-u btn-u-lg  btn-brd btn-brd-hover rounded-4x btn-u-dark-blue" data-toggle="modal" data-toggle="modal" data-target="#exampleModalCenter">GET FREE QUOTE</a>
                 </div>
             </div>
         </div>
@@ -131,6 +155,7 @@
                 <div class="promo-item-content">
                     <h3>Achieve your dreams<br> Apply now for kuku project loan, up to 10 million shillings</h3>
                     <a class="btn-u btn-u-lg btn-u-upper" href="kukuloan">View more details</a>
+                    <a class="btn-u btn-u-lg  btn-brd btn-brd-hover rounded-4x btn-u-dark-blue" data-toggle="modal" data-toggle="modal" data-target="#exampleModalCenter">GET FREE QUOTE</a>
                 </div>
             </div>
         </div>
@@ -149,13 +174,17 @@
                     <h3>We deliver cash in<br> in <strong >24</strong> hours with minimum<strong > bureaucracy</strong> and <strong > swift customer service</strong></h3>
 
                     <a class="btn-u btn-u-lg btn-u-upper" href="cspage">View more details</a>
+
                 </div>
+
             </div>
+
         </div>
 
     </section>
 
     <!-- /Promo Section -->
+
 
     <!-- About Section -->
     <section class="infoblock-trio text-center--2xs" id="about">
@@ -570,31 +599,31 @@
                         <div class="row">
                             <div class="col-sm-6 g-mb-30">
                                 <label class="input">
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text" placeholder="Your name" class="name">
                                 </label>
                             </div>
                             <div class="col-sm-6 g-mb-30">
                                 <label class="input">
-                                    <input type="text" placeholder="Your phone">
+                                    <input type="text" placeholder="Your phone" class="phonenumber">
                                 </label>
                             </div>
                         </div>
                         <div class="row g-mb-30">
                             <div class="col-sm-12">
                                 <label class="input">
-                                    <input type="text" placeholder="Subject">
+                                    <input type="text" placeholder="Subject" class="subject">
                                 </label>
                             </div>
                         </div>
                         <div class="row g-mb-40">
                             <div class="col-sm-12">
                                 <label class="textarea textarea-expandable">
-                                    <textarea rows="3" placeholder="Message"></textarea>
+                                    <textarea rows="3" placeholder="Message" class="message"></textarea>
                                 </label>
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn-u btn-u-lg btn-u-upper">Send Message</button>
+                            <button class="btn-u btn-u-lg btn-u-upper customerContact">Send Message</button>
                         </div>
                     </form>
                     <!-- /Contact Form -->
@@ -748,6 +777,9 @@
     </section>
     <!-- /Pre-Footer -->
 
+
+
+
     <!-- Footer -->
     <footer class="footer g-bg-dark text-center--2xs">
         <div class="container g-pt-40 g-pb-20">
@@ -782,6 +814,120 @@
 </div><!--/wrapper-->
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalCenterTitle">Quote request form</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form action="" method="post" id="sky-form3" class="sky-form">
+
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Name</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    <input type="text" name="requesterName" id="requesterName" class="requesterName">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">E-mail</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-envelope-o"></i>
+                                    <input type="email" name="requesterEmail" id="requesterEmail" class="requesterEmail">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <div class="col col-6">
+                                <label class="label">Mobile number</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-mobile-phone"></i>
+                                    <input type="text" name="requesterMobilenumber" id="name" class="requesterMobilenumber">
+                                </label>
+                            </div>
+                            <div class="col col-6">
+                            <label class="label">Product</label>
+                                <section>
+                                    <label class="select">
+                                        <select name="requesterProduct" class="requesterProduct">
+                                            <option value="0" selected disabled>Product</option>
+                                            <option value="Civil servant Loan">Civil servant Loan</option>
+                                            <option value="Ujasiriamali Loan">Ujasiriamali Loan</option>
+                                            <option value="Kuku project Loan">Kuku project Loan</option>
+                                        </select>
+                                        <i></i>
+                                    </label>
+                                </section> 
+                                </div>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Physical location</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-location-arrow"></i>
+                                    <input type="text" name="requesterLocation" id="requesterLocation" class="requesterLocation">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Job</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-gears"></i>
+                                    <input type="text" name="requesterJob" id="requesterJob" class="requesterJob">
+                                </label>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">Job location</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-location-arrow"></i>
+                                    <input type="text" name="requesterJobLocation" id="requesterJobLocation" class="requesterJobLocation">
+                                </label>
+                            </section>
+                            <!--<section class="col col-6">
+                                <label class="label">Job</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-gears"></i>
+                                    <input type="email" name="email2" id="email2">
+                                </label>
+                            </section>-->
+                        </div>
+
+
+
+                      <!--  <section>
+                            <label class="checkbox sendEmail"><input type="checkbox" name="copy"><i></i>Send a copy to my e-mail address</label>
+                        </section>-->
+                    </fieldset>
+
+
+                    <div class="message">
+                        <i class="rounded-x fa fa-check"></i>
+                        <p>Your message was successfully sent!</p>
+                    </div>
+                </form>
+                <!-- Contacts -->
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary sendQuoteRequest" data-dismiss="modal">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- Wait Block -->
 <div class="g-popup-wrapper">
@@ -806,10 +952,13 @@
 </div>
 <!-- End Wait Block -->
 
+
 <!-- JS Global Compulsory -->
 <script src="{{URL::asset('assets/plugins/jquery/jquery.min.html')}}"></script>
 <script src="{{URL::asset('assets/plugins/jquery/jquery-migrate.min.html')}}"></script>
 <script src="{{URL::asset('assets/plugins/bootstrap/js/bootstrap.min.html')}}"></script>
+
+
 
 <!-- JS Implementing Plugins -->
 <script src="{{URL::asset('assets/plugins/smoothScroll.html')}}"></script>
@@ -841,6 +990,11 @@
 
 <script src="{{URL::asset('assets/js/plugins/revolution-slider.html')}}"></script>
 <script src="{{URL::asset('assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.html')}}"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.25.6/sweetalert2.all.js"></script>
+<script src="sweetalert2.all.min.js"></script>
 
 
 <!-- JS Implementing Plugins -->
@@ -969,6 +1123,211 @@
             panorama.setVisible(false);
         }
     }
+
+    window.onload = function() {
+                                                                                                                                                                                                                                                                                                    
+
+        $('.customerContact').click(function () {
+
+
+            
+
+            var name = $('.name').val();
+            var phonenumber = $('.phonenumber').val();
+            var subject = $('.subject').val();
+            var message = $('.message').val();
+
+
+            if(name == null ||
+                    name == ""||
+                    phonenumber == null ||
+                    phonenumber == "" ||
+                    subject == null ||
+                    subject == "" ||
+                    message == null ||
+                    message == "") {
+
+
+                swal({
+                    type: 'error',
+                    title: 'Make sure you have fill all text box, before click send message',
+                    showConfirmButton: false,
+                    timer: 4000
+                })
+
+            }else{
+
+                var urlIP = {!! json_encode( Config::get('app.url')) !!};
+
+
+                //const ipAPI2 = 'http://localhost:8090/api/customerQuoteReuqest'
+                const ipAPI2 = urlIP + ':8090/api/customerContactRequest'
+
+
+                //const ipAPI2 = 'http://localhost:8090/api/customerContactRequest'
+
+                fetch(ipAPI2,{
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json,text-plain,",
+                        "X-CSRF-TOKEN":  '<?= csrf_token() ?>'
+                    },
+                    method: 'POST',
+                    body: JSON.stringify({
+                        name : name,
+                        phonenumber : phonenumber,
+                        subject: subject,
+                        message: message
+                    })
+
+                }).then(response => response.json())
+                    .then((data)=>{
+                    if(data.Status_code == "200") {
+
+
+                    swal({
+                        type: 'success',
+                        title: 'Thank you for choosing Platinum, our agent will give you a call with in 48 hrs \n Karibu',
+                        showConfirmButton: false,
+                        timer: 5000
+                    })
+
+                }else{
+
+                    swal({
+                        type: 'error',
+                        title: 'Something have gone wrong, we were unable to log your message, \n Please try again',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+            }).catch(() => {
+
+                    swal({
+                            type: 'error',
+                            title: 'Error on sending request',
+                            showConfirmButton: false,
+                            timer: 2000
+                    })
+
+            });
+
+
+
+
+
+            }
+
+
+
+        });
+
+
+        $('.sendQuoteRequest').click(function(){
+
+            var requesterName = $('.requesterName').val();
+            var requesterEmail = $('.requesterEmail').val();
+            var requesterMobilenumber = $('.requesterMobilenumber').val();
+            var requesterProduct = $('.requesterProduct').val();
+            var requesterLocation = $('.requesterLocation').val();
+            var requesterJob = $('.requesterJob').val();
+            var requesterJobLocation = $('.requesterJobLocation').val();
+            var sendEmail = $('.sendEmail').val();
+
+
+            if(requesterName == null ||
+                    requesterName == ""||
+                    requesterEmail == null ||
+                    requesterEmail == "" ||
+                    requesterMobilenumber == null ||
+                    requesterMobilenumber == "" ||
+                    requesterProduct == null ||
+                    requesterProduct == ""||
+                    requesterLocation == null ||
+                    requesterLocation == "" ||
+                    requesterJob == null ||
+                    requesterJob == "" ||
+                    requesterJobLocation == null ||
+                    requesterJobLocation == "" ) {
+
+
+                swal({
+                    type: 'error',
+                    title: 'Make sure you have fill all text box, before click send message',
+                    showConfirmButton: false,
+                    timer: 4000
+                })
+
+            }else{
+
+
+                var urlIP = {!! json_encode( Config::get('app.url')) !!};
+
+
+                //const ipAPI2 = 'http://localhost:8090/api/customerQuoteReuqest'
+                const ipAPI2 = urlIP + ':8090/api/customerQuoteReuqest'
+
+                fetch(ipAPI2,{
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json,text-plain,",
+                        "X-CSRF-TOKEN":  '<?= csrf_token() ?>'
+                    },
+                    method: 'POST',
+                    body: JSON.stringify({
+                        requesterName : requesterName,
+                        requesterEmail : requesterEmail,
+                        requesterMobilenumber : requesterMobilenumber,
+                        requesterProduct : requesterProduct,
+                        requesterLocation : requesterLocation,
+                        requesterJob : requesterJob,
+                        requesterJobLocation : requesterJobLocation
+                    })
+
+                }).then(response => response.json())
+            .then((data)=>{
+                    if(data.Status_code == "200") {
+
+
+                    swal({
+                        type: 'success',
+                        title: 'Thank you for choosing Platinum, our agent will give you a call with in 48 hrs \n Karibu',
+                        showConfirmButton: false,
+                        timer: 5000
+                    })
+
+                }else{
+
+                    swal({
+                        type: 'error',
+                        title: 'Something have gone wrong, we were unable to log your message, \n Please try again',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+            }).catch(() => {
+
+                    swal({
+                            type: 'error',
+                            title: 'Error on sending request',
+                            showConfirmButton: false,
+                            timer: 2000
+                    })
+
+                });
+
+
+            }
+
+
+
+
+        });
+
+
+    }
+
+
 
 
 </script>
